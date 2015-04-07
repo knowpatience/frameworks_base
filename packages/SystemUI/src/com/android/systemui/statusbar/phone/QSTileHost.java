@@ -38,6 +38,13 @@ import com.android.systemui.qs.tiles.HotspotTile;
 import com.android.systemui.qs.tiles.IntentTile;
 import com.android.systemui.qs.tiles.LocationTile;
 import com.android.systemui.qs.tiles.RotationLockTile;
+<<<<<<< HEAD
+=======
+import com.android.systemui.qs.tiles.ScreenOffTile;
+import com.android.systemui.qs.tiles.ScreenTimeoutTile;
+import com.android.systemui.qs.tiles.SoundTile;
+import com.android.systemui.qs.tiles.SyncTile;
+>>>>>>> b7e70c3... Add Sound tile to Quick Settings
 import com.android.systemui.qs.tiles.WifiTile;
 import com.android.systemui.statusbar.policy.BluetoothController;
 import com.android.systemui.statusbar.policy.CastController;
@@ -260,6 +267,13 @@ public class QSTileHost implements QSTile.Host, Tunable {
         else if (tileSpec.equals("location")) return new LocationTile(this);
         else if (tileSpec.equals("cast")) return new CastTile(this);
         else if (tileSpec.equals("hotspot")) return new HotspotTile(this);
+<<<<<<< HEAD
+=======
+        else if (tileSpec.equals("screenoff")) return new ScreenOffTile(this);
+        else if (tileSpec.equals("timeout")) return new ScreenTimeoutTile(this);
+        else if (tileSpec.equals("sound")) return new SoundTile(this);
+        else if (tileSpec.equals("sync")) return new SyncTile(this);
+>>>>>>> b7e70c3... Add Sound tile to Quick Settings
         else if (tileSpec.startsWith(IntentTile.PREFIX)) return IntentTile.create(this,tileSpec);
         else throw new IllegalArgumentException("Bad tile spec: " + tileSpec);
     }
