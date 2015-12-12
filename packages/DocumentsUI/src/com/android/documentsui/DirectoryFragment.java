@@ -614,7 +614,6 @@ public class DirectoryFragment extends Fragment {
                 boolean valid = false;
                 boolean hasFolder = false;
 
-                final State state = getDisplayState(DirectoryFragment.this);
                 final Cursor cursor = mAdapter.getItem(position);
                 if (cursor != null) {
                     final String docMimeType = getCursorString(cursor, Document.COLUMN_MIME_TYPE);
@@ -645,18 +644,6 @@ public class DirectoryFragment extends Fragment {
                     final MenuItem cut = menu.findItem(R.id.menu_cut);
                     copy.setVisible(false);
                     cut.setVisible(false);
-                    switch (state.action) {
-                        case ACTION_OPEN:
-                        case ACTION_CREATE:
-                        case ACTION_GET_CONTENT:
-                        case ACTION_OPEN_TREE:
-                            valid = isDocumentEnabled(docMimeType, docFlags)
-                                    && !Document.MIME_TYPE_DIR.equals(docMimeType);
-                            break;
-                        default:
-                            valid = isDocumentEnabled(docMimeType, docFlags);
-                            break;
-                    }
                 }
 
                 if (!valid) {
