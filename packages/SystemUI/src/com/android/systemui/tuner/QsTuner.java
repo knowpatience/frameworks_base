@@ -444,13 +444,7 @@ public class QsTuner extends Fragment implements Callback {
             else if (mSpec.equals("location")) return R.drawable.ic_signal_location_enable;
             else if (mSpec.equals("cast")) return R.drawable.ic_qs_cast_on;
             else if (mSpec.equals("hotspot")) return R.drawable.ic_hotspot_enable;
-<<<<<<< HEAD
-=======
-            else if (mSpec.equals("screenoff")) return R.drawable.ic_qs_power;
-            else if (mSpec.equals("timeout")) return R.drawable.ic_qs_screen_timeout_vector;
             else if (mSpec.equals("sound")) return R.drawable.ic_qs_ringer_audible;
-            else if (mSpec.equals("sync")) return R.drawable.ic_qs_sync_on;
->>>>>>> b7e70c3... Add Sound tile to Quick Settings
             return R.drawable.android;
         }
 
